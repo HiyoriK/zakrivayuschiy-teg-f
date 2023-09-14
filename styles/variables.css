@@ -2,7 +2,14 @@
   --bg-color: #fff;
   --text-color: #000;
   --main-font: 'Inter';
-  --accent-font: 'PressStart2P', ;
+  --accent-font: 'PressStart2P';
   --text-main-font-weight: 400;
   --title-main-font-weight: 700;
+  --line-color: #d3d3d3;
+  --grad-start-color: #e7e7e7;
+  --grad-finish-color: #1a1a1a;
+  --background-image: 
+      repeating-linear-gradient(var(--line-color), var(--line-color) 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(90deg,var(--line-color), var(--line-color) 2px, transparent 2px, transparent 4px),
+      linear-gradient(180deg, var(--grad-start-color) 0.01%, var(--grad-finish-color));
 }

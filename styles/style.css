@@ -17,11 +17,76 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font);
+  font-family: var(--main-font), 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text-color);
+  font-weight: var(--text-main-font-weight);
+  padding: 102px 26vi 105px;
 }
 
 @supports (font-variation-settings: normal) {
     .page {
-        font-family: 'Inter', sans-serif;
+        font-family: var(--main-font), 'Arial', sans-serif;
     }
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    background-color: var(--bg-color);
+    border: 1px solid var(--text-color);
+    max-inline-size: 696px;
+    margin-block-end: 107px;
+  }
+
+  .header__title {
+    font-family: var(--accent-font);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: clamp(3.0625rem, 2.7768rem + 1.4286vw, 4.0625rem);
+    margin-block-end: 20px;
+  }
+
+  .header__project-name {
+    font-family: var(--accent-font);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
+    margin-block-end: 25px;
+  }
+
+  .theme-menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-family: var(--accent-font);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    margin-block-end: 25px;
+  }
+
+  .cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(50px, 54px, 54px)
+  }
+
+  .cards-list__card {
+    border: 1px solid var(--text-color);
+    background-color: var(--bg-color);
+  }
+
+  @media (width: 320px) {
+
+    .header {
+      margin-block-end: 104px;
+    }
+
+
   }
