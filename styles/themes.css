@@ -24,15 +24,6 @@
   --title-main-font-weight: 785;
 }
 
-.theme-dark.header {
-  border: 2px solid var(--text-color);
-}
-
-
-.theme-dark.cards-list__card {
-  border: 2px solid var(--text-color);
-}
-
 @media (prefers-color-scheme: light) {
 
 :root {
@@ -41,6 +32,7 @@
   --text-main-font-weight: 400;
   --title-main-font-weight: 700;
 }
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -55,12 +47,4 @@
     --title-main-font-weight: 785;
   }
 
-  header {
-    border: 2px solid var(--text-color);
-  }
-
-
-  .cards-list__card {
-    border: 2px solid var(--text-color);
-  }
 }
