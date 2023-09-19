@@ -18,7 +18,27 @@
     transform: translateX(0);
   }
 
-  100%{
-    transform:translateX(4px)
+  100% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes focus-underline {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes background-fill {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
   }
 }

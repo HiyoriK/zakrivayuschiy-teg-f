@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link href="./images/favicon.ico" rel="icon" sizes="any" />
-    <link type="image/svg+xml" rel="icon" href="./svg/favicon.svg">
-    <link href="./images/favicon.png" rel="apple-touch-icon" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-    <link rel="stylesheet" href="./styles/themes.css" />
+    <link href="./fonts/fonts.css" rel="stylesheet">
+    <link href="./images/favicon.ico" rel="icon" sizes="any">
+    <link type="image/svg+xml" href="./svg/favicon.svg" rel="icon">
+    <link href="./images/favicon.png" rel="apple-touch-icon">
+    <link href="./styles/variables.css" rel="stylesheet">
+    <link href="./styles/globals.css" rel="stylesheet">
+    <link href="./styles/style.css" rel="stylesheet">
+    <link href="./styles/animations.css" rel="stylesheet">
+    <link href="./styles/themes.css" rel="stylesheet">
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
@@ -23,22 +23,17 @@
       <nav class="theme-menu header__theme-menu">
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">
+            <button class="theme-menu__button" data-theme="dark" type="button">
               Темно
             </button>
           </li>
           <li class="theme-menu__item">
-            <button
-              type="button"
-              data-theme="auto"
-              disabled
-              class="theme-menu__button"
-            >
+            <button class="theme-menu__button" data-theme="auto" type="button" disabled>
               Авто
             </button>
           </li>
           <li class="theme-menu__item">
-            <button type="button" data-theme="light" class="theme-menu__button">
+            <button class="theme-menu__button" data-theme="light" type="button">
               Светло
             </button>
           </li>
@@ -48,20 +43,46 @@
     <main class="main-content">
       <ul class="cards-list">
         <li class="cards-list__card">
-          <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+          <h2 class="card__title">
+            Фритрек и нулевой спринт: Подготовка к работе
+          </h2>
           <img class="card__picture" src="./images/image.svg">
           <div class="card__text">
-            <p>Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+            <p>
+              Это было самое начало пути. На этом этапе важно было проникнуться
+              основами и настроиться на учёбу. И, возможно, подумать, как новые
+              знания могут повлиять на ваше будущее.
+            </p>
             <p>Место для ваших воспоминаний о начале первого спринта.</p>
           </div>
-          <button class="card__icon-button"></button>
-          <button class="card__like-button">Like</button>
+          <div class="card__like-section">
+            <button class="card__icon-button is-liked">
+              <svg viewBox="0 0 39 36" >
+                <use href="#heart-icon">
+              </svg> 
+              <svg viewBox="0 0 39 36" >
+                <use href="./svg/heart.svg">
+              </svg> 
+            </button>
+            <button class="card__like-button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
         </li>
       </ul>
-      <button></button>
+      <button class="save-button">
+        <span class="button__text">Сохранить на память</span>
+      </button>
+      <dialog id="save">
+        <svg>
+          <use>
+          </use>
+        </svg>
+        <h2>Вставьте
+          дискету, чтобы продолжить</h2>
+          <button class="ok-button">ok</button>
+      </dialog>
     </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
-
-
