@@ -13,6 +13,18 @@
   --title-main-font-weight: 700;
 }
 
+@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .theme-light.watermark {
+      -webkit-text-stroke: 1px var(--bg-color);
+      text-stroke: 1px var(--bg-color);
+      text-shadow:
+      -1px 0 var(--bg-color),  
+     0 1px var(--bg-color), 
+     1px 0 var(--bg-color), 
+     0 -1px var(--bg-color), 
+  }
+} 
+
 
 :root.theme-dark {
   --bg-color: #000;
@@ -24,6 +36,18 @@
   --title-main-font-weight: 785;
 }
 
+@supports((text-stroke: 1px #000) or (-webkit-text-stroke: 1px #000)) {
+  .theme-dark.watermark {
+      -webkit-text-stroke: 1px var(--bg-color);
+      text-stroke: 1px var(--bg-color);
+      text-shadow:
+      -1px 0 var(--bg-color),  
+     0 1px var(--bg-color), 
+     1px 0 var(--bg-color), 
+     0 -1px var(--bg-color), 
+  }
+}
+
 @media (prefers-color-scheme: light) {
 
 :root {
@@ -32,7 +56,6 @@
   --text-main-font-weight: 400;
   --title-main-font-weight: 700;
 }
-
 }
 
 @media (prefers-color-scheme: dark) {
