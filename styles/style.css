@@ -226,6 +226,7 @@
 .button__text {
   font-family: var(--accent-font);
   font-size: 14px;
+  line-height: 0.9;
 }
 
 .card__like-button {
@@ -257,9 +258,7 @@
   inset-block-start: -2px;
   transform-origin: 0 0;
   animation: background-fill 0.5s ease-in-out;
-  
 }
-
 
 .save-button {
   margin: 54px auto 0;
@@ -273,6 +272,24 @@
 .floppy {
   block-size: 28px;
   inline-size: 29px;
+}
+
+.dialog {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+  font-family: 'Press Start 2P';
+  font-size: 14px;
+  font-weight: var(--text-main-font-weight);
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin: auto;
+  inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
+  block-size: 193px;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 /0.75);
 }
 
 @media (width <= 375px) {

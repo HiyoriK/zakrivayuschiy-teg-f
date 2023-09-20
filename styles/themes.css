@@ -35,6 +35,11 @@
   --title-main-font-weight: 785;
 }
 
+.theme-dark .card__like-button:hover,
+.theme-dark .save-button:hover {
+  color: var(--text-color);
+}
+
 @supports((text-stroke: 1px #000) or (-webkit-text-stroke: 1px #000)) {
   .theme-dark.watermark {
       -webkit-text-stroke: 1px var(--bg-color);
@@ -55,6 +60,18 @@
   --text-main-font-weight: 400;
   --title-main-font-weight: 700;
 }
+
+/* .page {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-variation-settings: "wght" var(--text-main-font-weight);
+} */
+
+
+.card__like-button:hover,
+.theme-dark.save-button:hover {
+  color: var(--bg-color);
+}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,4 +86,8 @@
     --title-main-font-weight: 785;
   }
 
+.card__like-button:hover,
+.theme-dark.save-button:hover {
+  color: var(--text-color);
+}
 }

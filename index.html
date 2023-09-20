@@ -82,18 +82,19 @@
       </ul>
       <button class="save-button">
         <svg viewBox="0 0 29px 28px" class="floppy">
-          <use href="#floppy-disk">
+          <use href="#floppy-disk"/>
         </svg>
-        <span class="button__text">Сохранить на память</span>
+        <span class="button__text" onclick="window['save'].showModal()" 
+        aria-controls="save">Сохранить на память</span>
       </button>
-      <dialog id="save">
-        <svg>
-          <use>
-          </use>
+      <dialog id="save" class="dialog">
+        <svg class="floppy">
+          <use href="#floppy-disk"/>
         </svg>
         <h2>Вставьте
           дискету, чтобы продолжить</h2>
-          <button class="ok-button">ok</button>
+          <button class="ok-button button__text"  type="button" 
+          onclick="window['save'].close()">ok</button>
       </dialog>
     </main>
     <script src="./scripts/like.js"></script>
