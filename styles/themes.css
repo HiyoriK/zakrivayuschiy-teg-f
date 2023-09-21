@@ -1,11 +1,3 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
-*/
-
-
 :root.theme-light {
   --bg-color: #fff;
   --text-color: #000;
@@ -13,17 +5,20 @@
   --title-main-font-weight: 700;
 }
 
-@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+.theme-light .card__like-button:hover,
+.theme-light .save-button:hover,
+.theme-light .ok-button:hover {
+  color: var(--bg-color);
+}
+
+@supports ((text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff)) {
   .theme-light.watermark {
-      -webkit-text-stroke: 1px var(--bg-color);
-      text-stroke: 1px var(--bg-color);
-      text-shadow:
-      -1px 0 var(--bg-color),  
-     0 1px var(--bg-color), 
-     1px 0 var(--bg-color), 
-     0 -1px var(--bg-color), 
+    text-shadow: -1px 0 var(--bg-color), 0 1px var(--bg-color),
+      1px 0 var(--bg-color), 0 -1px var(--bg-color);
+    -webkit-text-stroke: 1px var(--bg-color);
+    text-stroke: 1px var(--bg-color);
   }
-} 
+}
 
 :root.theme-dark {
   --bg-color: #000;
@@ -36,46 +31,42 @@
 }
 
 .theme-dark .card__like-button:hover,
-.theme-dark .save-button:hover {
+.theme-dark .save-button:hover,
+.theme-dark .ok-button:hover {
   color: var(--text-color);
 }
 
-@supports((text-stroke: 1px #000) or (-webkit-text-stroke: 1px #000)) {
+@supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
   .theme-dark.watermark {
-      -webkit-text-stroke: 1px var(--bg-color);
-      text-stroke: 1px var(--bg-color);
-      text-shadow:
-      -1px 0 var(--bg-color),  
-     0 1px var(--bg-color), 
-     1px 0 var(--bg-color), 
-     0 -1px var(--bg-color), 
+    text-shadow: -1px 0 var(--bg-color), 0 1px var(--bg-color),
+      1px 0 var(--bg-color), 0 -1px var(--bg-color);
+    -webkit-text-stroke: 1px var(--bg-color);
+    text-stroke: 1px var(--bg-color);
   }
 }
 
 @media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #fff;
+    --text-color: #000;
+    --text-main-font-weight: 400;
+    --title-main-font-weight: 700;
+  }
 
-:root {
-  --bg-color: #fff;
-  --text-color: #000;
-  --text-main-font-weight: 400;
-  --title-main-font-weight: 700;
-}
+  .page {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-variation-settings: "wght" var(--text-main-font-weight);
+  }
 
-/* .page {
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  font-variation-settings: "wght" var(--text-main-font-weight);
-} */
-
-
-.card__like-button:hover,
-.theme-dark.save-button:hover {
-  color: var(--bg-color);
-}
+  .card__like-button:hover,
+  .save-button:hover,
+  .ok-button:hover {
+    color: var(--bg-color);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-
   :root {
     --bg-color: #000;
     --text-color: #00cc14;
@@ -86,8 +77,9 @@
     --title-main-font-weight: 785;
   }
 
-.card__like-button:hover,
-.theme-dark.save-button:hover {
-  color: var(--text-color);
-}
+  .card__like-button:hover,
+  .save-button:hover,
+  .ok-button:hover {
+    color: var(--text-color);
+  }
 }

@@ -28,12 +28,13 @@ a {
 
 button,
 input {
+  border: none;
+  outline: none;
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
   background-color: transparent;
-  outline: none;
-  border: none;
+  cursor: pointer;
 }
 
 ul,
@@ -43,10 +44,10 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
