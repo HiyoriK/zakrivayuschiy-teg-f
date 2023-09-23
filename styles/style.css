@@ -5,7 +5,6 @@
 }
 
 .page {
-  padding: 102px clamp(0.0625rem, -8.1021rem + 34.8357vw, 23.25rem);
   color: var(--text-color);
   font-family: "Inter-Variable", "Arial", sans-serif;
   background-color: var(--bg-color);
@@ -18,6 +17,7 @@
 }
 
 .header {
+  margin: 102px auto;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -26,6 +26,7 @@
   border: 2px solid var(--text-color);
   background-color: var(--bg-color);
   inline-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
+  max-inline-size: 696px;
 }
 
 .header__title {
@@ -68,7 +69,6 @@
 .card__like-button:focus,
 .save-button:focus,
 .ok-button:focus {
-  border: none;
   outline: none;
 }
 
@@ -109,6 +109,8 @@
 }
 
 .main-content {
+  margin: 0 auto 102px;
+  max-inline-size: 696px;
   display: flex;
   flex-direction: column;
   inline-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
@@ -121,7 +123,7 @@
   margin: 0 auto;
 }
 
-.cards-list__card {
+.card {
   display: flex;
   flex-direction: column;
   border: 2px solid var(--text-color);
@@ -146,7 +148,7 @@
   margin-block-start: 30px;
   opacity: 0.5;
   font-family: var(--accent-font);
-  font-size: 14px;
+  font-size: 16px;
   mix-blend-mode: hard-light;
   inset-inline-end: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   -webkit-text-stroke: 1px;
@@ -256,9 +258,9 @@
 .save-button {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin: 54px auto 0;
-  padding: 15px 19px;
+  gap: 5px;
+  margin: 50px auto 0;
+  padding: 11px 17px;
   background-color: var(--bg-color);
 }
 
@@ -291,6 +293,7 @@
   display: grid;
   grid-template-columns: 40px 1fr;
   margin-block-end: 30px;
+  gap: 8px;
 }
 
 .ok-button {
@@ -330,23 +333,23 @@
 }
 
 .blur-filter {
-  filter: blur(3px);
+  filter: blur(2px) contrast(80%);
 }
 
 .opacity-filter {
-  filter: opacity(50%);
+  filter: opacity(90%) contrast(50%);
 }
 
 .contrast-filter {
-  filter: contrast(90%) opacity(90%) hue-rotate(90deg);
+  filter: contrast(70%) hue-rotate(280deg);
 }
 
 .invert-filter {
-  filter: invert(20%) hue-rotate(-60deg);
+  filter: invert(20%);
 }
 
 .sepia-filter {
-  filter: sepia(70%);
+  filter: sepia(60%);
 }
 
 .hue-filter {

@@ -1,12 +1,13 @@
 :root {
   --bg-color: #fff;
   --text-color: #000;
-  --accent-font: 'PressStart2P';
+  --accent-font: 'PressStart2P', sans-serif;
   --text-main-font-weight: 400;
   --title-main-font-weight: 700;
   --line-color: #d3d3d3;
   --grad-start-color: #e7e7e7;
   --grad-finish-color: #1a1a1a;
+  --heart-fill: #ff0000;
   --background-image: 
       repeating-linear-gradient(var(--line-color), var(--line-color) 2px, transparent 2px, transparent 4px),
       repeating-linear-gradient(90deg,var(--line-color), var(--line-color) 2px, transparent 2px, transparent 4px),

@@ -49,27 +49,27 @@
 }
 
 .like-icon:active .core {
-  fill: #ff0000;
+  fill: var(--heart-fill);
   transition: 0.3s;
 }
 
 .like-icon:active .main-part {
-  fill: #ff0000;
+  fill: var(--heart-fill);
   transition: 0.3s 0.05s;
 }
 
 .like-icon.is-liked .core {
-  fill: #ff0000;
+  fill: var(--heart-fill);
   transition: 0.3s;
 }
 
 .like-icon.is-liked .main-part {
-  fill: #ff0000;
+  fill: var(--heart-fill);
   transition: 0.3s 0.03s;
 }
 
 .like-icon.is-liked .contour {
-  fill: #ff0000;
+  fill: var(--heart-fill);
   transition: 0.3s 0.06s;
 }
 
@@ -102,6 +102,6 @@
   }
 
   100% {
-    fill: #ff0000;
+    fill: var(--heart-fill);
   }
 }
